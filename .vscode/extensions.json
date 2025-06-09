@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+      "redhat.vscode-quarkus",
+      "vscjava.vscode-java-test",
+      "cnshenj.vscode-task-manager"
+    ]
+}

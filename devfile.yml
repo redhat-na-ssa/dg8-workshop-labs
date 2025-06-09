@@ -1,0 +1,31 @@
+schemaVersion: 2.2.2
+metadata:
+  name: datagrid-workshop
+components:
+  - name: tools
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel9@sha256:cca6cbf5adcb5ce83392795573fe258d468568bddc3ad3618297e9e6234cfb79
+      env:
+        - name: QUARKUS_HTTP_HOST
+          value: 0.0.0.0
+      endpoints:
+        - exposure: none
+          name: debug
+          protocol: tcp
+          targetPort: 5005
+        - exposure: public
+          name: hello-greeting
+          protocol: https
+          targetPort: 8080
+          path: /hello/greeting/devspaces-user
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+      cpuLimit: '4'
+      cpuRequest: '1'
+      memoryLimit: 8G
+      memoryRequest: 4G
+      mountSources: true
+  - name: m2
+    volume:
+      size: 1G
