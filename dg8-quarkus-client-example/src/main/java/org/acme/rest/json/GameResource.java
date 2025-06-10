@@ -27,6 +27,10 @@ import static org.acme.rest.json.Init.GAME_CACHE;
 @Consumes(MediaType.APPLICATION_JSON)
 public class GameResource {
 
+    // TODO: add cache 
+
+    // TODO: Add Get and Post
+
 
     @DELETE
     public Game delete(Game game) {
