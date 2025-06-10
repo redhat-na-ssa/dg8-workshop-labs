@@ -31,13 +31,13 @@ public class Exercise3 {
         FunctionalMap.WriteOnlyMap<String, String> writeOnlyMap = WriteOnlyMapImpl.create(functionalMap);
         FunctionalMap.ReadOnlyMap<String, String> readOnlyMap = ReadOnlyMapImpl.create(functionalMap);
 
-        // TODO  Execute two parallel write-only operation to store key/value pairs
+        // TODO: Execute two parallel write-only operation to store key/value pairs
 
 
-        // TODO When each write-only operation completes, execute a read-only operation to retrieve the value
+        // TODO: When each write-only operation completes, execute a read-only operation to retrieve the value
 
 
-        // TODO When the read-only operation completes, print it out
+        // TODO: When the read-only operation completes, print it out
 
         // Create a read-write map
         FunctionalMap.ReadWriteMap<String, String> readWriteMap = ReadWriteMapImpl.create(functionalMap);
@@ -45,7 +45,7 @@ public class Exercise3 {
         
         // Use read-write multi-key based operation to write new values
         // together with lifespan and return previous values
-        // TODO
+        // TODO:
 
         // Use read-only multi-key operation to read current values for multiple keys
         Traversable<EntryView.ReadEntryView<String, String>> entryViews =

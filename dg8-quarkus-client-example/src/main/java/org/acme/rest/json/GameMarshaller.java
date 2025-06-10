@@ -6,11 +6,11 @@ import org.infinispan.protostream.MessageMarshaller;
 
 public class GameMarshaller implements MessageMarshaller<Game>{
 
-    // Override readFrom
+    // TODO: Override readFrom
 
-    // Override writeTo
+    // TODO: Override writeTo
 
-    // Override getJavaClass
+    // TODO: Override getJavaClass
 
-    // Override getTypeName
+    // TODO: Override getTypeName
 }

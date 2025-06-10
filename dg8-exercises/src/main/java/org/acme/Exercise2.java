@@ -14,8 +14,7 @@ public class Exercise2 {
 
         // TODO: create a cache using the supplied configuration
 
-        // Store and retrieve value
-
+        // TODO: Store and retrieve value
         
         // TODO: Stop the cache manager and release all resources
 
