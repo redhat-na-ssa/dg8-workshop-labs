@@ -8,22 +8,12 @@ components:
       env:
         - name: QUARKUS_HTTP_HOST
           value: 0.0.0.0
-      endpoints:
-        - exposure: none
-          name: debug
-          protocol: tcp
-          targetPort: 5005
-        - exposure: public
-          name: hello-greeting
-          protocol: https
-          targetPort: 8080
-          path: /hello/greeting/devspaces-user
       volumeMounts:
         - name: m2
           path: /home/user/.m2
-      cpuLimit: '4'
+      cpuLimit: '2'
       cpuRequest: '1'
-      memoryLimit: 8G
+      memoryLimit: 6G
       memoryRequest: 4G
       mountSources: true
   - name: m2
