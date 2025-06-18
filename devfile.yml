@@ -1,6 +1,11 @@
 schemaVersion: 2.2.2
 metadata:
   name: datagrid-workshop
+projects:
+  - name: dg8-workshop-labs
+    git:
+      remotes:
+        origin: 'https://github.com/redhat-na-ssa/dg8-workshop-labs.git'
 components:
   - name: tools
     container:
