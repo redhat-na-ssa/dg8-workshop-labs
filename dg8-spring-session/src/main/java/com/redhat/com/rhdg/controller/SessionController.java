@@ -23,10 +23,10 @@ public class SessionController {
   public Map<String, String> createSession(HttpSession session) {
     Map<String, String> result = new HashMap<>();
     String sessionId = session.getId();
-
-    result.put("created:", sessionId);
-    result.put("active", this.cacheManager.getCache("sessions").getNativeCache().keySet().toString());
-    result.put("count:", String.valueOf(this.count.getAndIncrement()));
+    
+    result.put("active_session_ids", this.cacheManager.getCache("sessions").getNativeCache().keySet().toString());
+    result.put("this_session_id", sessionId);
+    result.put("this_requests", String.valueOf(this.count.getAndIncrement()));
 
     return result;
   }

@@ -40,7 +40,7 @@
         <button id="clear" type="submit" class="btn btn-danger">Clear the cache</button>
         <h3>Result:</h3>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8" style="width: 98%;" >
                 <pre><code id="greeting-result">Invoke the service to see the result.</code></pre>
             </div>
             <div class="col-md-4">
@@ -59,7 +59,7 @@
 <script>
     function updateCached() {
         $.getJSON("/session", function (res) {
-            $("#greeting-result").text(JSON.stringify(res));
+            $("#greeting-result").text(JSON.stringify(res, null, 2));
         });
     }
 
@@ -70,7 +70,7 @@
             $("#greeting-result").text("Invoking the service...");
             $.getJSON("/session", function (res) {
                 var end = new Date();
-                $("#greeting-result").text(JSON.stringify(res));
+                $("#greeting-result").text(JSON.stringify(res, null, 2));
             });
             e.preventDefault();
         });
