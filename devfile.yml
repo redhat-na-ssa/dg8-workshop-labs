@@ -29,12 +29,12 @@ components:
     volume:
       size: 1G
 commands:
-  - id: runFirstInstance
+  - id: instance1
     exec:
       component: tools
       commandLine: 'mvn clean spring-boot:run'
       workingDir: "${PROJECTS_ROOT}/dg8-workshop-labs/dg8-spring-session"
-  - id: runSecondInstance
+  - id: instance2
     exec:
       component: tools
       commandLine: 'mvn clean spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"'
