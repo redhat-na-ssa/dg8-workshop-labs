@@ -18,6 +18,25 @@ components:
       memoryLimit: 6G
       memoryRequest: 4G
       mountSources: true
+    endpoints:
+    - name: instance-1
+      targetPort: 8080
+      exposure: public 
+    - name: instance-2
+      targetPort: 8081
+      exposure: public       
   - name: m2
     volume:
       size: 1G
+commands:
+  - id: run first instance
+    exec:
+      component: tools
+      commandLine: 'mvn clean spring-boot:run'
+      workingDir: "${PROJECTS_ROOT}/dg8-workshop-labs/dg8-spring-session"
+
+  - id: run second instance
+    exec:
+      component: tools
+      commandLine: 'mvn clean spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"'
+      workingDir: "${PROJECTS_ROOT}/dg8-workshop-labs/dg8-spring-session"               
