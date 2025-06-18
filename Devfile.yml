@@ -5,9 +5,6 @@ components:
   - name: tools
     container:
       image: registry.redhat.io/devspaces/udi-rhel9@sha256:cca6cbf5adcb5ce83392795573fe258d468568bddc3ad3618297e9e6234cfb79
-      env:
-        - name: QUARKUS_HTTP_HOST
-          value: 0.0.0.0
       volumeMounts:
         - name: m2
           path: /home/user/.m2
